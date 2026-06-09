@@ -1,0 +1,85 @@
+{
+  "schema_version": "0.1",
+  "id": "adrenalectomy",
+  "name": "Adrenalectomy (laparoscopic)",
+  "aliases": ["adrenalectomy", "left adrenalectomy", "right adrenalectomy", "laparoscopic adrenalectomy", "suprarenalectomy", "肾上腺切除", "腹腔镜肾上腺切除", "左侧肾上腺切除", "右侧肾上腺切除", "肾上腺"],
+  "region": "adrenal / retroperitoneum",
+  "kind": "surgical",
+  "tier": "model_generated",
+  "confidence": "high",
+  "sources": [
+    "Model-generated (textbook-level); verify against an operative atlas / SAGES / urologic surgery text. Left lateral-transperitoneal anatomy reviewed by the user (medical illustrator)."
+  ],
+  "last_verified_by": "",
+  "review_note": "Side-dependent venous drainage is the top error: LEFT central vein drains into the LEFT RENAL VEIN; RIGHT central vein drains directly into the IVC. Approach-dependent exposure: lateral transperitoneal reflects the spleen and pancreatic tail medially; posterior retroperitoneal does NOT (direct posterior access).",
+  "labels": ["Adrenal gland", "Adrenal central vein", "Left renal vein", "Inferior vena cava (IVC)", "Kidney (upper pole)", "Spleen", "Pancreatic tail", "Splenic vessels", "Gerota's fascia", "Inferior phrenic vein", "Aorta"],
+  "intake": [
+    {
+      "ask": "Figure type?",
+      "why": "Determines composition and how much can be shown clearly",
+      "options": ["anatomy overview", "step storyboard", "single key-step closeup"],
+      "default": "step storyboard"
+    },
+    {
+      "ask": "Which side?",
+      "why": "Side determines venous drainage: left -> left renal vein, right -> IVC",
+      "options": ["left", "right"],
+      "default": "left"
+    },
+    {
+      "ask": "Approach?",
+      "why": "Determines exposure: lateral transperitoneal reflects spleen/pancreas (left) or liver (right); posterior retroperitoneal accesses the gland directly from behind without mobilizing them",
+      "options": ["lateral transperitoneal", "posterior retroperitoneal"],
+      "default": "lateral transperitoneal"
+    },
+    {
+      "ask": "Teaching focus?",
+      "why": "One figure cannot show everything; focus drives which step dominates",
+      "options": ["central vein control", "exposure (spleen/pancreas reflection)", "gland-kidney relationship", "positioning & ports"],
+      "default": "central vein control"
+    }
+  ],
+  "figure_scopes": {
+    "overview": "Adrenal gland in situ — superomedial to the kidney upper pole, with the central vein to its drainage (left renal vein on the left, IVC on the right) and spleen/pancreas/aorta relations",
+    "storyboard": "Lateral transperitoneal (left): positioning/ports -> splenic flexure + spleen/pancreatic tail medial reflection -> open Gerota and expose the gland -> control the central vein at its drainage -> periadrenal dissection -> retrieval",
+    "closeup": "Central vein draining into its vessel (left renal vein / IVC)"
+  },
+  "laterality": "Adrenal sits superomedial to the upper pole of the kidney within Gerota's fascia. LEFT central vein drains into the left renal vein; RIGHT central vein drains directly into the IVC. In the lateral transperitoneal approach the spleen and pancreatic tail (left) or liver (right) are reflected to expose the gland; the posterior retroperitoneal approach does not mobilize them.",
+  "must_have": [
+    "Adrenal gland shown as a distinct golden, lobulated body superomedial to the upper pole of the kidney, separate from the renal parenchyma.",
+    "Adrenal central vein and the vessel it drains into (left renal vein on the left; IVC on the right).",
+    "Kidney upper pole and Gerota's fascia.",
+    "For the lateral transperitoneal left approach: spleen, pancreatic tail, splenic flexure, and splenorenal/splenophrenic attachments."
+  ],
+  "spatial_rules": [
+    "LEFT adrenal central vein drains into the left renal vein; RIGHT adrenal central vein drains directly into the IVC. Draw the destination for the chosen side.",
+    "The adrenal gland lies superomedial to the upper pole of the kidney and is a discrete gland, not fused with the renal parenchyma.",
+    "Lateral transperitoneal (left): spleen and pancreatic tail are anterior and are reflected medially to expose the retroperitoneum; the posterior retroperitoneal approach does not mobilize them.",
+    "Stay in the periadrenal (capsular) plane; suprarenal arteries are small and multiple (from inferior phrenic artery, aorta, and renal artery)."
+  ],
+  "forbidden_errors": [
+    {"error": "Adrenal central vein drawn to the wrong destination for the chosen side (left into the IVC, or right into the renal vein).", "severity": "critical"},
+    {"error": "Wrong side depicted relative to the request.", "severity": "critical"},
+    {"error": "Renal vein or renal artery clipped/divided as if it were the adrenal central vein.", "severity": "critical"},
+    {"error": "Spleen or pancreatic tail injured, or exposure shown without reflecting them in the lateral transperitoneal approach.", "severity": "major"},
+    {"error": "Adrenal gland not identifiable as a discrete gland (fused into the kidney upper pole).", "severity": "major"},
+    {"error": "Spleen/pancreas reflection drawn for a posterior retroperitoneal approach, which does not mobilize them.", "severity": "major"}
+  ],
+  "safety_concept": "Identify and control the adrenal central vein at its drainage (left renal vein on the left, IVC on the right); in the lateral transperitoneal approach reflect the spleen and pancreatic tail without injury; stay in the periadrenal plane and protect the renal vessels and kidney.",
+  "phases": [
+    "Patient in lateral decubitus (operative side up) and trocar placement.",
+    "Mobilize the splenic flexure; divide the splenorenal and splenophrenic attachments.",
+    "Reflect the spleen and pancreatic tail medially to expose the retroperitoneum and the superomedial upper renal pole.",
+    "Open Gerota's fascia and identify the discrete golden adrenal gland.",
+    "Identify and control the adrenal central vein at the left renal vein.",
+    "Periadrenal dissection controlling small arteries, then bag and extract the gland."
+  ],
+  "verify": [
+    "Adrenal is a discrete golden gland superomedial to the kidney upper pole, separate from renal parenchyma.",
+    "Central vein drains into the correct vessel for the side (left renal vein on the left; IVC on the right).",
+    "For lateral transperitoneal left: spleen and pancreatic tail reflected medially and intact; Gerota opened.",
+    "Renal vein, renal artery, and kidney preserved and not mistaken for the adrenal vein.",
+    "Correct side depicted.",
+    "Non-gory and publication-appropriate."
+  ]
+}

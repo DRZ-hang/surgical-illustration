@@ -1,0 +1,78 @@
+{
+  "schema_version": "0.1",
+  "id": "lap_chole",
+  "name": "Laparoscopic cholecystectomy",
+  "aliases": ["lap chole", "LC", "cholecystectomy", "calot", "hepatocystic triangle", "critical view of safety", "胆囊切除", "胆囊切除数", "腹腔镜胆囊切除", "胆囊切除术", "Calot三角", "肝胆三角", "肝胆囊三角", "胆囊管", "胆囊动脉", "安全视野"],
+  "region": "hepatobiliary",
+  "kind": "surgical",
+  "tier": "model_generated",
+  "confidence": "high",
+  "sources": [
+    "Candidate for verification: SAGES Safe Cholecystectomy Multi-Society Practice Guideline (2020)",
+    "Tokyo Guidelines 2018",
+    "Strasberg SM, Critical View of Safety"
+  ],
+  "last_verified_by": "",
+  "review_note": "Not yet clinician-verified. First candidate for promotion to verified.",
+  "labels": ["Gallbladder", "Cystic duct", "Common hepatic duct", "Common bile duct", "Common hepatic artery", "Proper hepatic artery", "Right hepatic artery", "Cystic artery", "Hepatocystic triangle / Calot triangle", "Liver edge", "Critical View of Safety", "Lower gallbladder dissected from liver bed"],
+  "intake": [
+    {
+      "ask": "Figure type?",
+      "why": "Determines composition and how much can be shown clearly",
+      "options": ["anatomy overview", "step storyboard", "single key-step closeup"],
+      "default": "step storyboard"
+    },
+    {
+      "ask": "Teaching focus?",
+      "why": "One figure cannot show everything; focus drives which structures dominate",
+      "options": ["Critical View of Safety", "ductal/vascular anatomy", "port placement"],
+      "default": "Critical View of Safety"
+    }
+  ],
+  "figure_scopes": {
+    "overview": "Biliary tree and Calot triangle in one plate, with an optional inset zoom of the triangle",
+    "storyboard": "Multi-panel: exposure -> hepatocystic triangle dissection -> CVS -> clip/divide -> gallbladder separation",
+    "closeup": "Single Critical View of Safety panel"
+  },
+  "laterality": "Right upper quadrant; gallbladder on the inferior surface of liver segments IVb/V",
+  "must_have": [
+    "Gallbladder fundus, body, infundibulum/neck, and inferior liver edge.",
+    "Cystic duct, common hepatic duct, common bile duct, common hepatic artery, proper hepatic artery, right hepatic artery, and cystic artery relationship.",
+    "Usual cystic artery course: branch from the right hepatic artery, pass through the hepatocystic triangle, and run toward the gallbladder neck/body.",
+    "Hepatocystic triangle / Calot triangle shown as a real anatomic space, not a decorative outline.",
+    "Critical View of Safety panel with lower gallbladder separated from the liver bed."
+  ],
+  "spatial_rules": [
+    "Cystic duct joins the common hepatic duct to form the common bile duct.",
+    "Common hepatic artery continues as the proper hepatic artery, which divides into right and left hepatic arteries; the cystic artery usually arises from the right hepatic artery.",
+    "Cystic artery lies in or near the hepatocystic triangle and approaches the gallbladder neck before supplying the gallbladder wall.",
+    "Only cystic duct and cystic artery should enter the gallbladder before division.",
+    "Common bile duct remains continuous and untouched in clip/divide panels.",
+    "Right hepatic artery should continue toward the right liver, not be clipped or mistaken for the cystic artery."
+  ],
+  "forbidden_errors": [
+    {"error": "Common bile duct clipped or divided.", "severity": "critical"},
+    {"error": "Cystic duct confused with common bile duct.", "severity": "critical"},
+    {"error": "Right hepatic artery clipped, divided, or mislabeled as the cystic artery.", "severity": "critical"},
+    {"error": "A third duct shown entering the gallbladder in the CVS panel.", "severity": "major"},
+    {"error": "Cystic artery placed far outside the hepatocystic triangle without explanation.", "severity": "major"},
+    {"error": "Cystic artery drawn traveling into the left hepatic lobe instead of toward the gallbladder neck/body.", "severity": "major"}
+  ],
+  "safety_concept": "Achieve the Critical View of Safety before dividing any duct or artery; if CVS cannot be achieved, depict a bail-out concept rather than unsafe division.",
+  "phases": [
+    "Port/instrument context and gross anatomy.",
+    "Gallbladder exposure and fundus/infundibulum retraction to open the hepatocystic triangle.",
+    "Dissection and clearing of the hepatocystic / Calot triangle.",
+    "Critical View of Safety verification: only cystic duct and cystic artery enter the gallbladder; lower gallbladder separated from the liver bed.",
+    "Clip and divide the cystic duct and cystic artery; common bile duct untouched.",
+    "Gallbladder separation from the liver bed and specimen extraction."
+  ],
+  "verify": [
+    "Cystic duct joins the common hepatic duct to form the common bile duct; CBD continuous and uninstrumented.",
+    "Cystic artery arises from the right hepatic artery in the usual depiction, traverses the hepatocystic triangle, and runs toward the gallbladder neck/body.",
+    "Right hepatic artery continues toward the right liver and is not clipped or divided.",
+    "CVS panel shows only two structures entering the gallbladder and the lower third off the liver bed.",
+    "No extra/third duct entering the gallbladder.",
+    "Non-gory and publication-appropriate."
+  ]
+}

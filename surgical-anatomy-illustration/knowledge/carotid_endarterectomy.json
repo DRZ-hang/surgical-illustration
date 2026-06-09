@@ -1,0 +1,51 @@
+{
+  "schema_version": "0.1",
+  "id": "carotid_endarterectomy",
+  "name": "Carotid endarterectomy",
+  "aliases": ["carotid", "endarterectomy", "carotid endarterectomy", "CEA", "颈动脉", "颈动脉内膜剥脱", "颈动脉内膜切除", "颈动脉斑块"],
+  "region": "neck / vascular",
+  "kind": "surgical",
+  "tier": "model_generated",
+  "confidence": "high",
+  "sources": ["Model-generated (textbook-level); not yet citation-verified."],
+  "last_verified_by": "",
+  "review_note": "Standard anatomy; not yet clinician-verified.",
+  "labels": ["Common carotid artery", "Internal carotid artery", "External carotid artery", "Carotid bifurcation", "Plaque / stenosis zone", "Vagus nerve region", "Hypoglossal nerve", "Patch / restored lumen"],
+  "intake": [
+    {"ask": "Figure type?", "why": "Determines composition", "options": ["anatomy overview", "step storyboard", "single key-step closeup"], "default": "step storyboard"},
+    {"ask": "Teaching focus?", "why": "One figure cannot show everything", "options": ["ICA/ECA identity & plaque", "arteriotomy / patch", "overview"], "default": "ICA/ECA identity & plaque"}
+  ],
+  "figure_scopes": {
+    "overview": "Carotid bifurcation and stenosis overview",
+    "storyboard": "Bifurcation/stenosis -> clamp/arteriotomy -> plaque removal plane -> patch/restored lumen",
+    "closeup": "Plaque at the bifurcation/ICA origin within the lumen"
+  },
+  "laterality": "Neck; internal carotid artery posterolateral with no neck branches, external carotid artery gives branches, bifurcation central",
+  "must_have": [
+    "Common carotid artery, internal carotid artery, external carotid artery, carotid bifurcation, plaque/stenosis zone, vagus nerve region, and hypoglossal nerve if superior exposure is shown.",
+    "Arteriotomy/patch concept only if requested and non-gory."
+  ],
+  "spatial_rules": [
+    "Internal carotid artery is posterior/lateral and has no neck branches in the illustrated segment.",
+    "External carotid artery gives branches and should not be mislabeled as ICA.",
+    "Carotid bifurcation should be central to the stenosis/plaque teaching view."
+  ],
+  "forbidden_errors": [
+    {"error": "Internal and external carotid arteries swapped.", "severity": "critical"},
+    {"error": "Branches added to the internal carotid artery in the neck.", "severity": "major"},
+    {"error": "Plaque placed outside the carotid lumen or as an unrelated mass.", "severity": "major"}
+  ],
+  "safety_concept": "Correctly distinguish ICA (no neck branches) from ECA; keep plaque intraluminal at the bifurcation/ICA origin.",
+  "phases": [
+    "Carotid bifurcation and stenosis overview.",
+    "Clamp/arteriotomy concept, if requested.",
+    "Plaque removal plane or lumen restoration concept.",
+    "Patch/closed artery with restored flow, if requested."
+  ],
+  "verify": [
+    "ICA/ECA identities and branch pattern are correct.",
+    "Plaque location is intraluminal at the bifurcation/ICA origin as intended.",
+    "Nerve landmarks are not confused with vessels.",
+    "Non-gory and publication-appropriate."
+  ]
+}

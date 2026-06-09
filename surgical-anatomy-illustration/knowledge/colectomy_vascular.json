@@ -1,0 +1,53 @@
+{
+  "schema_version": "0.1",
+  "id": "colectomy_vascular",
+  "name": "Colectomy vascular anatomy",
+  "aliases": ["colectomy", "mesocolon", "ileocolic", "sigmoid colectomy", "right colectomy", "left colectomy", "结肠切除", "乙状结肠切除", "右半结肠切除", "左半结肠切除", "肠系膜", "回结肠血管"],
+  "region": "colon / mesentery",
+  "kind": "surgical",
+  "tier": "model_generated",
+  "confidence": "medium",
+  "sources": ["Model-generated (textbook-level); not yet citation-verified."],
+  "last_verified_by": "",
+  "review_note": "Vascular tree is side-dependent; confirm the named pedicles and ureter relationship for the specific colectomy side against your atlas.",
+  "labels": ["Colon segment", "Mesocolon", "Named vascular pedicle", "Marginal artery", "Superior mesenteric vessels", "Inferior mesenteric vessels", "Ureter", "Retroperitoneal plane"],
+  "intake": [
+    {"ask": "Figure type?", "why": "Determines composition", "options": ["anatomy overview", "step storyboard", "single key-step closeup"], "default": "anatomy overview"},
+    {"ask": "Colectomy side?", "why": "The vascular tree differs by side", "options": ["right", "left/sigmoid"], "default": "right"},
+    {"ask": "Teaching focus?", "why": "One figure cannot show everything", "options": ["named vascular pedicle", "ureter / retroperitoneal safety", "mesenteric orientation"], "default": "named vascular pedicle"}
+  ],
+  "figure_scopes": {
+    "overview": "Colon segment, mesocolon, and the side-appropriate vascular tree",
+    "storyboard": "Orientation -> vascular pedicle/marginal artery -> safe dissection plane (ureter protected) -> resection concept",
+    "closeup": "Named vascular pedicle with the ureter kept posterior to the mesocolic plane"
+  },
+  "laterality": "Side-dependent (right vs left/sigmoid); the ureter is retroperitoneal and posterior to the mesocolic dissection plane",
+  "must_have": [
+    "Colon segment of interest, mesocolon, named feeding vessels, marginal artery, and relevant ureter/gonadal vessel safety landmarks.",
+    "Superior mesenteric artery/vein or inferior mesenteric artery/vein context appropriate to the colectomy side.",
+    "Lymphovascular pedicle or mesenteric window only if requested."
+  ],
+  "spatial_rules": [
+    "Right colectomy anatomy should use ileocolic/right colic/middle colic relationships as appropriate.",
+    "Left/sigmoid colectomy anatomy should use inferior mesenteric artery, left colic, sigmoid branches, and superior rectal artery relationships.",
+    "Ureter should remain retroperitoneal and posterior to the mesocolic dissection plane."
+  ],
+  "forbidden_errors": [
+    {"error": "Ureter placed inside the mesocolon or vessel pedicle.", "severity": "critical"},
+    {"error": "Right and left colectomy vascular trees mixed in one unlabeled anatomy map.", "severity": "major"},
+    {"error": "An invented continuous vessel branch that contradicts the selected colectomy side.", "severity": "major"}
+  ],
+  "safety_concept": "Match the vascular tree to the colectomy side and keep the ureter protected, posterior to the mesocolic plane.",
+  "phases": [
+    "Colon segment and mesenteric orientation.",
+    "Named vascular pedicle and marginal artery map.",
+    "Safe dissection plane with the ureter/retroperitoneal landmark protected.",
+    "Resection/vascular control concept, if requested."
+  ],
+  "verify": [
+    "Vascular tree matches the selected colectomy side.",
+    "Ureter and retroperitoneal landmarks are protected and not inside the pedicle.",
+    "Marginal artery/arcade continuity is anatomically plausible.",
+    "Non-gory and publication-appropriate."
+  ]
+}

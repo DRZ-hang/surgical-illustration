@@ -1,0 +1,183 @@
+{
+  "topic": "laparoscopic cholecystectomy complete surgical process diagram",
+  "template": "lap_chole",
+  "review_status": "pending_visual_review",
+  "review_scale": {
+    "correct": "Visible and anatomically correct.",
+    "wrong": "Visible but anatomically wrong, unsafe, or misleading; state the correct relationship.",
+    "needs_manual_verification": "Suspicious or borderline; a human expert should confirm.",
+    "cannot_verify": "Image too unclear or occluded to judge; verify manually.",
+    "not_applicable": "Not required for this specific requested figure."
+  },
+  "sections": [
+    {
+      "category": "required_anatomy",
+      "results": [
+        {
+          "item": "Gallbladder fundus, body, infundibulum/neck, and inferior liver edge.",
+          "status": "unchecked",
+          "evidence": "",
+          "correction_needed": ""
+        },
+        {
+          "item": "Cystic duct, common hepatic duct, common bile duct, cystic artery, and right hepatic artery relationship.",
+          "status": "unchecked",
+          "evidence": "",
+          "correction_needed": ""
+        },
+        {
+          "item": "Hepatocystic triangle / Calot triangle shown as a real anatomic space, not a decorative outline.",
+          "status": "unchecked",
+          "evidence": "",
+          "correction_needed": ""
+        },
+        {
+          "item": "Critical View of Safety panel with lower gallbladder separated from the liver bed.",
+          "status": "unchecked",
+          "evidence": "",
+          "correction_needed": ""
+        }
+      ]
+    },
+    {
+      "category": "spatial_relationships",
+      "results": [
+        {
+          "item": "Cystic duct joins the common hepatic duct to form the common bile duct.",
+          "status": "unchecked",
+          "evidence": "",
+          "correction_needed": ""
+        },
+        {
+          "item": "Cystic artery lies in or near the hepatocystic triangle and approaches the gallbladder neck.",
+          "status": "unchecked",
+          "evidence": "",
+          "correction_needed": ""
+        },
+        {
+          "item": "Only cystic duct and cystic artery should enter the gallbladder before division.",
+          "status": "unchecked",
+          "evidence": "",
+          "correction_needed": ""
+        },
+        {
+          "item": "Common bile duct remains continuous and untouched in clip/divide panels.",
+          "status": "unchecked",
+          "evidence": "",
+          "correction_needed": ""
+        }
+      ]
+    },
+    {
+      "category": "forbidden_errors",
+      "results": [
+        {
+          "item": "Common bile duct clipped or divided.",
+          "status": "unchecked",
+          "evidence": "",
+          "correction_needed": ""
+        },
+        {
+          "item": "Cystic duct confused with common bile duct.",
+          "status": "unchecked",
+          "evidence": "",
+          "correction_needed": ""
+        },
+        {
+          "item": "A third duct shown entering the gallbladder in the CVS panel.",
+          "status": "unchecked",
+          "evidence": "",
+          "correction_needed": ""
+        },
+        {
+          "item": "Cystic artery placed far outside the hepatocystic triangle without explanation.",
+          "status": "unchecked",
+          "evidence": "",
+          "correction_needed": ""
+        }
+      ]
+    },
+    {
+      "category": "step_completeness",
+      "results": [
+        {
+          "item": "Port/instrument context and gross anatomy.",
+          "status": "unchecked",
+          "evidence": "",
+          "correction_needed": ""
+        },
+        {
+          "item": "Gallbladder exposure and fundus/infundibulum retraction to open the hepatocystic triangle.",
+          "status": "unchecked",
+          "evidence": "",
+          "correction_needed": ""
+        },
+        {
+          "item": "Dissection and clearing of the hepatocystic / Calot triangle.",
+          "status": "unchecked",
+          "evidence": "",
+          "correction_needed": ""
+        },
+        {
+          "item": "Critical View of Safety verification: only cystic duct and cystic artery enter the gallbladder; lower gallbladder separated from the liver bed.",
+          "status": "unchecked",
+          "evidence": "",
+          "correction_needed": ""
+        },
+        {
+          "item": "Clip and divide the cystic duct and cystic artery; common bile duct untouched.",
+          "status": "unchecked",
+          "evidence": "",
+          "correction_needed": ""
+        },
+        {
+          "item": "Gallbladder separation from the liver bed and specimen extraction.",
+          "status": "unchecked",
+          "evidence": "",
+          "correction_needed": ""
+        }
+      ]
+    },
+    {
+      "category": "post_generation_review",
+      "results": [
+        {
+          "item": "Cystic duct joins the common hepatic duct to form the common bile duct; CBD continuous and uninstrumented.",
+          "status": "unchecked",
+          "evidence": "",
+          "correction_needed": ""
+        },
+        {
+          "item": "Cystic artery lies within the hepatocystic triangle.",
+          "status": "unchecked",
+          "evidence": "",
+          "correction_needed": ""
+        },
+        {
+          "item": "CVS panel shows only two structures entering the gallbladder and the lower third off the liver bed.",
+          "status": "unchecked",
+          "evidence": "",
+          "correction_needed": ""
+        },
+        {
+          "item": "No extra/third duct entering the gallbladder.",
+          "status": "unchecked",
+          "evidence": "",
+          "correction_needed": ""
+        },
+        {
+          "item": "Non-gory and publication-appropriate.",
+          "status": "unchecked",
+          "evidence": "",
+          "correction_needed": ""
+        }
+      ]
+    }
+  ],
+  "overall_decision": {
+    "status": "unchecked",
+    "acceptable_for_draft": "",
+    "must_regenerate": "",
+    "notes": ""
+  }
+}

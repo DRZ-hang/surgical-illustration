@@ -1,0 +1,51 @@
+{
+  "schema_version": "0.1",
+  "id": "hepatectomy_anatomy",
+  "name": "Hepatectomy / liver resection anatomy",
+  "aliases": ["hepatectomy", "liver resection", "hepatic transection", "liver segmentectomy", "肝切除", "肝段切除", "肝叶切除", "肝脏离断", "肝实质离断"],
+  "region": "hepatobiliary",
+  "kind": "surgical",
+  "tier": "model_generated",
+  "confidence": "high",
+  "sources": ["Model-generated (textbook-level); not yet citation-verified."],
+  "last_verified_by": "",
+  "review_note": "Standard anatomy; not yet clinician-verified. Confirm the transection plane matches the requested resection.",
+  "labels": ["Resection territory", "Future liver remnant", "Middle hepatic vein", "Right hepatic vein", "Left hepatic vein", "Portal pedicle", "Inferior vena cava", "Transection plane"],
+  "intake": [
+    {"ask": "Figure type?", "why": "Determines composition", "options": ["anatomy overview", "step storyboard", "single key-step closeup"], "default": "anatomy overview"},
+    {"ask": "Teaching focus?", "why": "One figure cannot show everything", "options": ["transection plane & segments", "inflow/outflow landmarks", "overview"], "default": "transection plane & segments"}
+  ],
+  "figure_scopes": {
+    "overview": "Liver orientation with a segment/sector map and the transection plane",
+    "storyboard": "Segment map -> inflow/outflow landmarks -> transection plane -> resection territory/remnant",
+    "closeup": "Transection plane tied to hepatic vein/portal anatomy"
+  },
+  "laterality": "Hepatic vein planes define boundaries; IVC remains posterior; caudate (Segment I) sits posterior near the IVC",
+  "must_have": [
+    "Liver sectors/segments relevant to the requested resection, hepatic veins, portal pedicles, IVC relationship, and transection plane.",
+    "Gallbladder fossa and ligamentum teres landmarks when an anterior orientation is used."
+  ],
+  "spatial_rules": [
+    "Hepatic vein planes define intersegmental/intersectional boundaries.",
+    "Portal pedicles supply segments and should not be drawn as hepatic vein branches.",
+    "IVC remains posterior; Segment I/caudate sits posterior near the IVC."
+  ],
+  "forbidden_errors": [
+    {"error": "Portal vein and hepatic vein systems swapped.", "severity": "critical"},
+    {"error": "Caudate lobe placed on the anterior free surface.", "severity": "major"},
+    {"error": "A random transection plane unrelated to segment/section anatomy.", "severity": "major"}
+  ],
+  "safety_concept": "Tie the transection plane to hepatic vein/portal anatomy; do not confuse portal inflow with hepatic venous outflow.",
+  "phases": [
+    "Liver orientation and segment/sector map.",
+    "Vascular inflow/outflow landmarks.",
+    "Transection plane tied to hepatic vein/portal anatomy.",
+    "Resection territory or remnant anatomy, if requested."
+  ],
+  "verify": [
+    "Transection plane follows segment/sector logic.",
+    "Portal inflow and hepatic venous outflow are not confused.",
+    "IVC and caudate relationship is posterior and coherent.",
+    "Non-gory and publication-appropriate."
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "schema_version": "0.1",
+  "id": "couinaud",
+  "name": "Couinaud liver segments",
+  "aliases": ["couinaud", "liver segment", "liver segments", "肝段", "库氏分段", "Couinaud分段", "肝脏分段"],
+  "region": "hepatobiliary",
+  "kind": "anatomy",
+  "tier": "model_generated",
+  "confidence": "high",
+  "sources": ["Model-generated (textbook-level); not yet citation-verified."],
+  "last_verified_by": "",
+  "review_note": "Standard anatomy; not yet clinician-verified. Watch anterior/posterior handling of Segment I.",
+  "labels": ["Segment I", "Segment II", "Segment III", "Segment IVa", "Segment IVb", "Segment V", "Segment VI", "Segment VII", "Segment VIII", "Middle hepatic vein", "Right hepatic vein", "Portal vein branches"],
+  "intake": [
+    {"ask": "Figure type?", "why": "Determines composition", "options": ["anatomy overview (all segments)", "single sector/segment closeup"], "default": "anatomy overview (all segments)"},
+    {"ask": "Teaching focus?", "why": "One figure cannot show everything", "options": ["segment map", "hepatic vein planes"], "default": "segment map"}
+  ],
+  "figure_scopes": {
+    "overview": "All segments I-VIII with hepatic vein planes in one plate, optional posterior inset for Segment I",
+    "closeup": "A specific sector or segment with its bounding hepatic vein plane"
+  },
+  "laterality": "Standard anterior view: viewer-left contains the right hemiliver segments; Segment I is posterior near the IVC",
+  "must_have": [
+    "Segments I, II, III, IVa, IVb, V, VI, VII, and VIII.",
+    "Middle hepatic vein, right hepatic vein, and left hepatic vein.",
+    "Portal vein branches."
+  ],
+  "spatial_rules": [
+    "Use standard Couinaud labels: Segment I, II, III, IVa, IVb, V, VI, VII, VIII.",
+    "Right anterior sector is VIII over V; right posterior sector is VII over VI.",
+    "Left lateral sector is II over III; left medial sector is IVa over IVb.",
+    "In the standard anterior view, viewer-left contains the right hemiliver segments.",
+    "Right hepatic vein separates right anterior/posterior sectors; middle hepatic vein separates right and left hemiliver along the Cantlie line; left hepatic vein separates left medial/lateral sectors.",
+    "Segment I is posterior near the IVC and not on the anterior free surface."
+  ],
+  "forbidden_errors": [
+    {"error": "Segments II-VIII called lobes.", "severity": "major"},
+    {"error": "Posterior Segment I placed on the anterior liver surface.", "severity": "major"},
+    {"error": "Segment ownership swapped relative to the hepatic vein planes.", "severity": "major"}
+  ],
+  "safety_concept": "Hepatic vein planes (not portal pedicles) define segment boundaries; respect the Cantlie line and Segment I posterior position.",
+  "phases": [],
+  "verify": [
+    "Couinaud segment ownership matches the hepatic vein planes.",
+    "Right anterior sector is VIII over V; right posterior sector is VII over VI; left lateral is II over III; left medial is IVa over IVb.",
+    "Segment I is posterior near the IVC, not on the anterior free surface.",
+    "Non-gory and publication-appropriate."
+  ]
+}

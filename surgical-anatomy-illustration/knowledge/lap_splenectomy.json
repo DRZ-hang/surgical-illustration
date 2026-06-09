@@ -1,0 +1,76 @@
+{
+  "schema_version": "0.1",
+  "id": "lap_splenectomy",
+  "name": "Laparoscopic splenectomy",
+  "aliases": ["splenectomy", "lap splenectomy", "spleen removal", "脾切除", "腹腔镜脾切除", "脾切除术", "脾脏切除", "脾门", "胰尾"],
+  "region": "spleen / upper GI",
+  "kind": "surgical",
+  "tier": "model_generated",
+  "confidence": "medium",
+  "sources": [
+    "Model-generated (textbook-level); verify against an operative atlas splenectomy chapter and SAGES guidance."
+  ],
+  "last_verified_by": "",
+  "review_note": "Splenic hilum-to-pancreatic-tail relationship and exact step order must be checked against your atlas; accessory spleen handling depends on indication.",
+  "labels": ["Spleen", "Splenic artery", "Splenic vein", "Splenic hilum", "Tail of pancreas", "Short gastric vessels", "Gastrosplenic ligament", "Splenorenal ligament", "Splenocolic ligament", "Splenophrenic ligament", "Accessory spleen"],
+  "intake": [
+    {
+      "ask": "Figure type?",
+      "why": "Determines composition and how much can be shown clearly",
+      "options": ["anatomy overview", "step storyboard", "single key-step closeup"],
+      "default": "step storyboard"
+    },
+    {
+      "ask": "Teaching focus?",
+      "why": "One figure cannot show everything; focus drives which structures dominate",
+      "options": ["ligamentous attachments", "splenic hilum vs pancreatic tail", "short gastric vessels", "accessory spleen search", "positioning/port placement"],
+      "default": "splenic hilum vs pancreatic tail"
+    },
+    {
+      "ask": "Indication context?",
+      "why": "A hematologic indication (e.g. ITP) requires showing/searching for accessory spleens",
+      "options": ["hematologic (ITP)", "trauma", "splenomegaly"],
+      "default": "hematologic (ITP)"
+    }
+  ],
+  "figure_scopes": {
+    "overview": "Spleen with its ligaments and vascular supply in the left upper quadrant",
+    "storyboard": "Multi-panel: splenocolic mobilization -> gastrosplenic ligament and short gastrics -> hilum exposure -> hilar control protecting the pancreatic tail -> retrieval",
+    "closeup": "Single splenic hilum panel showing the safe plane from the pancreatic tail"
+  },
+  "laterality": "Left upper quadrant, subdiaphragmatic, behind ribs 9-11; splenic vein lies posterior to the pancreas, splenic artery along the superior border of the pancreas",
+  "must_have": [
+    "Spleen.",
+    "Splenic hilum (splenic artery and vein).",
+    "Tail of the pancreas.",
+    "Short gastric vessels (vasa brevia).",
+    "Splenorenal, gastrosplenic, splenocolic, and splenophrenic ligaments."
+  ],
+  "spatial_rules": [
+    "The splenic artery runs along the superior border of the pancreas and is tortuous; the splenic vein lies posterior to the pancreas.",
+    "Short gastric vessels travel within the gastrosplenic ligament.",
+    "The tail of the pancreas lies close to the splenic hilum and reaches it in roughly half of people."
+  ],
+  "forbidden_errors": [
+    {"error": "Hilar vessel division shown without a safe plane from the pancreatic tail (implying tail injury).", "severity": "critical"},
+    {"error": "Spleen drawn in the right upper quadrant (wrong laterality).", "severity": "critical"},
+    {"error": "Short gastric vessels omitted.", "severity": "major"},
+    {"error": "Accessory spleen omitted for a hematologic indication.", "severity": "major"}
+  ],
+  "safety_concept": "Protect the tail of the pancreas during hilar control to avoid pancreatic leak/fistula.",
+  "phases": [
+    "Mobilize the splenic flexure / divide the splenocolic ligament.",
+    "Divide the gastrosplenic ligament and short gastric vessels.",
+    "Expose the splenic hilum via the splenorenal ligament.",
+    "Control the splenic artery and vein, staying clear of the pancreatic tail.",
+    "Divide the remaining attachments (splenophrenic ligament).",
+    "Bag and extract the spleen."
+  ],
+  "verify": [
+    "Spleen in the left upper quadrant, subdiaphragmatic, behind the ribs.",
+    "Safe plane shown between the hilar vessels and the pancreatic tail; tail uninjured. [model-generated - check carefully against your atlas]",
+    "Short gastric vessels within the gastrosplenic ligament.",
+    "Splenic artery along the superior pancreatic border; splenic vein posterior to the pancreas.",
+    "For a hematologic indication, accessory spleen labeled (hilum / pancreatic tail / ligaments / omentum)."
+  ]
+}

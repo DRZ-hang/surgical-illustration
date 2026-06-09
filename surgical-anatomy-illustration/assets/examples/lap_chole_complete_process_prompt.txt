@@ -1,0 +1,71 @@
+Adapter for ChatGPT/OpenAI image models: keep instructions explicit, avoid dense text inside the image, and prioritize clean publication layout.
+
+MAIN PROMPT:
+SYSTEM_INSTRUCTION_MODE: SURGICAL_ANATOMY_ACADEMIC
+
+Topic: laparoscopic cholecystectomy complete surgical process diagram
+Task type: surgical illustration
+Visual style: NEJM-style clinical figure
+Style cues: publication-grade medical illustration, muted academic palette, soft airbrushed tissue rendering, thin precise dark-grey outlines, off-white background, clean journal figure composition.
+Composition: 6-panel procedure storyboard following the exact panel plan below; do not compress this procedure into four panels.
+Background: clean white or off-white publication background.
+Rendering: non-gory, atraumatic, didactic, anatomy-first medical illustration.
+
+## NON-NEGOTIABLE ANATOMY RULES
+- Anatomy correctness outranks visual style.
+- Preserve left/right, medial/lateral, superior/inferior, and anterior/posterior relationships.
+- Do not invent vessels, ducts, nerves, tissue planes, or operative steps.
+- If a structure is uncertain, simplify or omit it rather than labeling it incorrectly.
+- Keep surgical instruments simplified unless instrument position is the teaching point.
+
+## TEMPLATE: lap_chole
+- Core safety concept: Achieve the Critical View of Safety before dividing any duct or artery; if CVS cannot be achieved, depict a bail-out concept rather than unsafe division.
+- Orientation / laterality: Right upper quadrant; gallbladder on the inferior surface of liver segments IVb/V
+- Must show: Gallbladder fundus, body, infundibulum/neck, and inferior liver edge.
+- Must show: Cystic duct, common hepatic duct, common bile duct, cystic artery, and right hepatic artery relationship.
+- Must show: Hepatocystic triangle / Calot triangle shown as a real anatomic space, not a decorative outline.
+- Must show: Critical View of Safety panel with lower gallbladder separated from the liver bed.
+- Spatial anatomy rules: Cystic duct joins the common hepatic duct to form the common bile duct.
+- Spatial anatomy rules: Cystic artery lies in or near the hepatocystic triangle and approaches the gallbladder neck.
+- Spatial anatomy rules: Only cystic duct and cystic artery should enter the gallbladder before division.
+- Spatial anatomy rules: Common bile duct remains continuous and untouched in clip/divide panels.
+- Forbidden mistake [critical]: Common bile duct clipped or divided.
+- Forbidden mistake [critical]: Cystic duct confused with common bile duct.
+- Forbidden mistake [major]: A third duct shown entering the gallbladder in the CVS panel.
+- Forbidden mistake [major]: Cystic artery placed far outside the hepatocystic triangle without explanation.
+
+## LABEL TERMINOLOGY
+- Gallbladder
+- Cystic duct
+- Common hepatic duct
+- Common bile duct
+- Cystic artery
+- Right hepatic artery
+- Hepatocystic triangle / Calot triangle
+- Liver edge
+- Critical View of Safety
+- Lower gallbladder dissected from liver bed
+
+## PROCEDURE PANEL PLAN
+- Required panel count: 6
+- Use all listed panels unless the user explicitly requests a shorter figure.
+- Do not replace this plan with a generic four-panel storyboard.
+- Port/instrument context and gross anatomy.
+- Gallbladder exposure and fundus/infundibulum retraction to open the hepatocystic triangle.
+- Dissection and clearing of the hepatocystic / Calot triangle.
+- Critical View of Safety verification: only cystic duct and cystic artery enter the gallbladder; lower gallbladder separated from the liver bed.
+- Clip and divide the cystic duct and cystic artery; common bile duct untouched.
+- Gallbladder separation from the liver bed and specimen extraction.
+
+NEGATIVE PROMPT:
+low quality, bad anatomy, mirrored anatomy, invented anatomy, blurry labels, text artifacts, messy handwriting, overlapping lines, garish colors, cartoon gore, blood splatter, watermark
+
+POST-GENERATION CHECK:
+- Verify anatomy positions, proportions, orientation, and layer relationships.
+- Cystic duct joins the common hepatic duct to form the common bile duct; CBD continuous and uninstrumented.
+- Cystic artery lies within the hepatocystic triangle.
+- CVS panel shows only two structures entering the gallbladder and the lower third off the liver bed.
+- No extra/third duct entering the gallbladder.
+- Non-gory and publication-appropriate.
+- Confirm no invented ducts, arteries, veins, nerves, or operative steps are shown.
+- Check labels and leader lines do not obscure critical anatomy.

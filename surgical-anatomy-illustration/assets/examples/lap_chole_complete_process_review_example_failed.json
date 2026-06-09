@@ -1,0 +1,65 @@
+{
+  "topic": "laparoscopic cholecystectomy complete surgical process diagram",
+  "template": "lap_chole",
+  "review_status": "completed_visual_review",
+  "review_scale": {
+    "correct": "Visible and anatomically correct.",
+    "wrong": "Visible but anatomically wrong, unsafe, or misleading; state the correct relationship.",
+    "needs_manual_verification": "Suspicious or borderline; a human expert should confirm.",
+    "cannot_verify": "Image too unclear or occluded to judge; verify manually.",
+    "not_applicable": "Not required for this specific requested figure."
+  },
+  "sections": [
+    {
+      "category": "required_anatomy",
+      "results": [
+        {
+          "item": "Gallbladder fundus, body, infundibulum/neck, and inferior liver edge.",
+          "status": "correct",
+          "evidence": "Gallbladder and liver edge are visible across exposure panels.",
+          "correction_needed": ""
+        },
+        {
+          "item": "Cystic duct, common hepatic duct, common bile duct, cystic artery, and right hepatic artery relationship.",
+          "status": "needs_manual_verification",
+          "evidence": "The ductal confluence is crowded and the common bile duct is not clearly separated from the cystic duct.",
+          "correction_needed": "Redraw the ductal confluence with cystic duct joining common hepatic duct to form a continuous common bile duct."
+        }
+      ]
+    },
+    {
+      "category": "spatial_relationships",
+      "results": [
+        {
+          "item": "Only cystic duct and cystic artery should enter the gallbladder before division.",
+          "status": "wrong",
+          "evidence": "The CVS panel appears to show an extra tubular structure entering the gallbladder neck.",
+          "correction_needed": "Remove the extra tubular structure and show only cystic duct and cystic artery entering the gallbladder."
+        },
+        {
+          "item": "Common bile duct remains continuous and untouched in clip/divide panels.",
+          "status": "wrong",
+          "evidence": "A clip appears too close to or possibly on the common bile duct.",
+          "correction_needed": "Move all clips onto the cystic duct and cystic artery only; keep the common bile duct continuous and uninstrumented."
+        }
+      ]
+    },
+    {
+      "category": "step_completeness",
+      "results": [
+        {
+          "item": "Panel 8: final inspection of liver bed, clips, hemostasis, and no bile leak; optional specimen inset.",
+          "status": "needs_manual_verification",
+          "evidence": "The final inspection panel is present but does not clearly show clip security or absence of bile leak.",
+          "correction_needed": "Make the final panel show liver bed inspection, secure clips, hemostasis, and no bile leak."
+        }
+      ]
+    }
+  ],
+  "overall_decision": {
+    "status": "wrong",
+    "acceptable_for_draft": "no",
+    "must_regenerate": "yes",
+    "notes": "Unsafe biliary anatomy ambiguity requires correction before use."
+  }
+}

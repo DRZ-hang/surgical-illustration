@@ -1,0 +1,88 @@
+CORRECTION PROMPT
+
+Topic: laparoscopic cholecystectomy complete surgical process diagram
+Template: lap_chole
+
+Revise or regenerate the image to fix the scientific accuracy issues below.
+Preserve all panels and anatomy that were already correct.
+Do not introduce new ducts, vessels, nerves, tissue planes, or operative steps.
+
+Problems to fix:
+1. [NEEDS_MANUAL_VERIFICATION] required_anatomy: Cystic duct, common hepatic duct, common bile duct, cystic artery, and right hepatic artery relationship.
+   Required action: Redraw the ductal confluence with cystic duct joining common hepatic duct to form a continuous common bile duct.
+   Evidence: The ductal confluence is crowded and the common bile duct is not clearly separated from the cystic duct.
+2. [WRONG] spatial_relationships: Only cystic duct and cystic artery should enter the gallbladder before division.
+   Required action: Remove the extra tubular structure and show only cystic duct and cystic artery entering the gallbladder.
+   Evidence: The CVS panel appears to show an extra tubular structure entering the gallbladder neck.
+3. [WRONG] spatial_relationships: Common bile duct remains continuous and untouched in clip/divide panels.
+   Required action: Move all clips onto the cystic duct and cystic artery only; keep the common bile duct continuous and uninstrumented.
+   Evidence: A clip appears too close to or possibly on the common bile duct.
+4. [NEEDS_MANUAL_VERIFICATION] step_completeness: Panel 8: final inspection of liver bed, clips, hemostasis, and no bile leak; optional specimen inset.
+   Required action: Make the final panel show liver bed inspection, secure clips, hemostasis, and no bile leak.
+   Evidence: The final inspection panel is present but does not clearly show clip security or absence of bile leak.
+
+Hard constraints for the revision:
+- Keep the figure non-gory and publication-appropriate.
+- Keep anatomical laterality and spatial relationships coherent.
+- If a corrected structure cannot be shown clearly, simplify the panel rather than guessing.
+- After revision, re-run the scientific review checklist.
+
+Original generation prompt for context:
+SYSTEM_INSTRUCTION_MODE: SURGICAL_ANATOMY_ACADEMIC
+
+Topic: laparoscopic cholecystectomy complete surgical process diagram
+Task type: surgical illustration
+Visual style: NEJM-style clinical figure
+Style cues: publication-grade medical illustration, muted academic palette, soft airbrushed tissue rendering, thin precise dark-grey outlines, off-white background, clean journal figure composition.
+Composition: 6-panel procedure storyboard following the exact panel plan below; do not compress this procedure into four panels.
+Background: clean white or off-white publication background.
+Rendering: non-gory, atraumatic, didactic, anatomy-first medical illustration.
+
+## NON-NEGOTIABLE ANATOMY RULES
+- Anatomy correctness outranks visual style.
+- Preserve left/right, medial/lateral, superior/inferior, and anterior/posterior relationships.
+- Do not invent vessels, ducts, nerves, tissue planes, or operative steps.
+- If a structure is uncertain, simplify or omit it rather than labeling it incorrectly.
+- Keep surgical instruments simplified unless instrument position is the teaching point.
+
+## TEMPLATE: lap_chole
+- Core safety concept: Achieve the Critical View of Safety before dividing any duct or artery; if CVS cannot be achieved, depict a bail-out concept rather than unsafe division.
+- Orientation / laterality: Right upper quadrant; gallbladder on the inferior surface of liver segments IVb/V
+- Must show: Gallbladder fundus, body, infundibulum/neck, and inferior liver edge.
+- Must show: Cystic duct, common hepatic duct, common bile duct, cystic artery, and right hepatic artery relationship.
+- Must show: Hepatocystic triangle / Calot triangle shown as a real anatomic space, not a decorative outline.
+- Must show: Critical View of Safety panel with lower gallbladder separated from the liver bed.
+- Spatial anatomy rules: Cystic duct joins the common hepatic duct to form the common bile duct.
+- Spatial anatomy rules: Cystic artery lies in or near the hepatocystic triangle and approaches the gallbladder neck.
+- Spatial anatomy rules: Only cystic duct and cystic artery should enter the gallbladder before division.
+- Spatial anatomy rules: Common bile duct remains continuous and untouched in clip/divide panels.
+- Forbidden mistake [critical]: Common bile duct clipped or divided.
+- Forbidden mistake [critical]: Cystic duct confused with common bile duct.
+- Forbidden mistake [major]: A third duct shown entering the gallbladder in the CVS panel.
+- Forbidden mistake [major]: Cystic artery placed far outside the hepatocystic triangle without explanation.
+
+## LABEL TERMINOLOGY
+- Gallbladder
+- Cystic duct
+- Common hepatic duct
+- Common bile duct
+- Cystic artery
+- Right hepatic artery
+- Hepatocystic triangle / Calot triangle
+- Liver edge
+- Critical View of Safety
+- Lower gallbladder dissected from liver bed
+
+## PROCEDURE PANEL PLAN
+- Required panel count: 6
+- Use all listed panels unless the user explicitly requests a shorter figure.
+- Do not replace this plan with a generic four-panel storyboard.
+- Port/instrument context and gross anatomy.
+- Gallbladder exposure and fundus/infundibulum retraction to open the hepatocystic triangle.
+- Dissection and clearing of the hepatocystic / Calot triangle.
+- Critical View of Safety verification: only cystic duct and cystic artery enter the gallbladder; lower gallbladder separated from the liver bed.
+- Clip and divide the cystic duct and cystic artery; common bile duct untouched.
+- Gallbladder separation from the liver bed and specimen extraction.
+
+NEGATIVE PROMPT:
+low quality, bad anatomy, mirrored anatomy, invented anatomy, blurry labels, text artifacts, messy handwriting, overlapping lines, garish colors, cartoon gore, blood splatter, watermark

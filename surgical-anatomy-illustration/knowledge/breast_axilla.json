@@ -1,0 +1,51 @@
+{
+  "schema_version": "0.1",
+  "id": "breast_axilla",
+  "name": "Breast and axillary anatomy",
+  "aliases": ["breast", "axilla", "sentinel node", "mastectomy", "axillary dissection", "乳腺", "腋窝", "前哨淋巴结", "乳腺切除", "腋窝清扫"],
+  "region": "breast / axilla",
+  "kind": "surgical",
+  "tier": "model_generated",
+  "confidence": "medium",
+  "sources": ["Model-generated (textbook-level); not yet citation-verified."],
+  "last_verified_by": "",
+  "review_note": "Nodal levels and nerve courses vary in depiction; confirm level references and nerve identities against your atlas.",
+  "labels": ["Axillary vein", "Pectoralis minor", "Level I nodes", "Level II nodes", "Level III nodes", "Long thoracic nerve", "Thoracodorsal bundle", "Intercostobrachial nerve region"],
+  "intake": [
+    {"ask": "Figure type?", "why": "Determines composition", "options": ["anatomy overview", "step storyboard", "single key-step closeup"], "default": "anatomy overview"},
+    {"ask": "Teaching focus?", "why": "One figure cannot show everything", "options": ["nodal levels / sentinel pathway", "nerve-sparing anatomy", "overview"], "default": "nodal levels / sentinel pathway"}
+  ],
+  "figure_scopes": {
+    "overview": "Breast and axillary orientation with pectoralis major/minor context",
+    "storyboard": "Orientation -> nodal levels/sentinel pathway -> axillary vein & nerve-sparing -> preserved relationships",
+    "closeup": "Axillary vein with long thoracic and thoracodorsal nerves preserved"
+  },
+  "laterality": "Axilla; axillary vein is the superior landmark, long thoracic nerve runs on the serratus/chest wall, thoracodorsal bundle courses posterolaterally",
+  "must_have": [
+    "Breast tissue, pectoralis major/minor context, axillary vein, long thoracic nerve, thoracodorsal bundle, intercostobrachial nerve region, and level I/II/III nodal anatomy when requested.",
+    "Sentinel node path or axillary dissection levels only if requested."
+  ],
+  "spatial_rules": [
+    "Axillary vein forms the superior landmark for axillary dissection anatomy.",
+    "Long thoracic nerve runs on the chest wall / serratus anterior region.",
+    "Thoracodorsal bundle courses posterior/lateral toward latissimus dorsi."
+  ],
+  "forbidden_errors": [
+    {"error": "Long thoracic nerve confused with the thoracodorsal nerve.", "severity": "major"},
+    {"error": "Nodal levels placed without a pectoralis minor reference when level anatomy is requested.", "severity": "major"},
+    {"error": "Nerves severed or crossed through lymph node labels.", "severity": "major"}
+  ],
+  "safety_concept": "Preserve the long thoracic and thoracodorsal nerves; reference nodal levels to pectoralis minor.",
+  "phases": [
+    "Breast and axillary orientation.",
+    "Nodal levels or sentinel pathway, if requested.",
+    "Axillary vein and nerve-sparing anatomy.",
+    "Final preserved nerve/vessel relationship, if useful."
+  ],
+  "verify": [
+    "Axillary vein, long thoracic nerve, and thoracodorsal bundle are distinct.",
+    "Nodal levels are referenced to pectoralis minor when shown.",
+    "Nerve preservation relationships are visually clear.",
+    "Non-gory and publication-appropriate."
+  ]
+}

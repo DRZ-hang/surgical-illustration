@@ -1,0 +1,52 @@
+{
+  "schema_version": "0.1",
+  "id": "thyroidectomy",
+  "name": "Thyroidectomy",
+  "aliases": ["thyroidectomy", "thyroid", "thyroid lobectomy", "甲状腺切除", "甲状腺叶切除", "甲状腺", "喉返神经", "甲状旁腺"],
+  "region": "neck / endocrine",
+  "kind": "surgical",
+  "tier": "model_generated",
+  "confidence": "high",
+  "sources": ["Model-generated (textbook-level); not yet citation-verified."],
+  "last_verified_by": "",
+  "review_note": "Standard anatomy; not yet clinician-verified.",
+  "labels": ["Thyroid lobe", "Recurrent laryngeal nerve", "Superior thyroid vessels", "Inferior thyroid artery", "Parathyroid glands", "Trachea", "Berry ligament"],
+  "intake": [
+    {"ask": "Figure type?", "why": "Determines composition", "options": ["anatomy overview", "step storyboard", "single key-step closeup"], "default": "step storyboard"},
+    {"ask": "Teaching focus?", "why": "One figure cannot show everything", "options": ["recurrent laryngeal nerve & parathyroid preservation", "vascular pedicles", "overview"], "default": "recurrent laryngeal nerve & parathyroid preservation"}
+  ],
+  "figure_scopes": {
+    "overview": "Thyroid, trachea, and strap-retracted neck anatomy",
+    "storyboard": "Overview -> superior pole vessels -> RLN & parathyroid preservation -> safe lobe mobilization",
+    "closeup": "Recurrent laryngeal nerve in the tracheoesophageal groove with parathyroids preserved"
+  },
+  "laterality": "Anterior neck; recurrent laryngeal nerve ascends in the tracheoesophageal groove, parathyroid glands lie posterior to the thyroid",
+  "must_have": [
+    "Thyroid lobe, trachea, recurrent laryngeal nerve, superior thyroid vessels, inferior thyroid artery, parathyroid glands, and Berry ligament region.",
+    "Posterior thyroid surface relationship for the parathyroid glands.",
+    "Recurrent laryngeal nerve course near the tracheoesophageal groove and Berry ligament."
+  ],
+  "spatial_rules": [
+    "Recurrent laryngeal nerve should ascend in the tracheoesophageal groove region toward the larynx.",
+    "Parathyroid glands are small and posterior to the thyroid, not large anterior nodules.",
+    "Superior thyroid vessels are superior pole structures; the inferior thyroid artery has a posterior/lateral relationship."
+  ],
+  "forbidden_errors": [
+    {"error": "Recurrent laryngeal nerve confused with the inferior thyroid artery.", "severity": "critical"},
+    {"error": "Parathyroid glands placed on the anterior free surface as large masses.", "severity": "major"},
+    {"error": "Nerve omitted when showing Berry ligament or posterior dissection anatomy.", "severity": "major"}
+  ],
+  "safety_concept": "Preserve the recurrent laryngeal nerve and parathyroid glands during lobe mobilization.",
+  "phases": [
+    "Thyroid, trachea, strap-retracted overview.",
+    "Superior pole vessel relationship.",
+    "Recurrent laryngeal nerve and parathyroid preservation view.",
+    "Safe lobe mobilization with nerve/parathyroid preserved."
+  ],
+  "verify": [
+    "Recurrent laryngeal nerve course is plausible and protected.",
+    "Parathyroid glands are posterior and small.",
+    "Superior and inferior vascular relationships are not swapped.",
+    "Non-gory and publication-appropriate."
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schema_version": "0.1",
+  "id": "biliary_tree",
+  "name": "Extrahepatic biliary tree anatomy",
+  "aliases": ["biliary tree", "extrahepatic biliary", "portal triad", "biliary anatomy", "胆道", "肝外胆道", "胆道系统", "肝十二指肠韧带", "门管三联", "胆囊管", "胆总管", "肝总管"],
+  "region": "hepatobiliary",
+  "kind": "anatomy",
+  "tier": "model_generated",
+  "confidence": "high",
+  "sources": ["Model-generated (textbook-level); not yet citation-verified."],
+  "last_verified_by": "",
+  "review_note": "Standard anatomy; not yet clinician-verified.",
+  "labels": ["Liver", "Gallbladder", "Right hepatic duct", "Left hepatic duct", "Common hepatic duct", "Cystic duct", "Common bile duct", "Proper hepatic artery", "Portal vein", "Duodenum"],
+  "intake": [
+    {"ask": "Figure type?", "why": "Determines composition", "options": ["anatomy overview", "single key-relationship closeup"], "default": "anatomy overview"},
+    {"ask": "Teaching focus?", "why": "One figure cannot show everything", "options": ["duct confluence", "portal triad relationship"], "default": "duct confluence"}
+  ],
+  "figure_scopes": {
+    "overview": "Liver, gallbladder, and the extrahepatic ducts down to the duodenum, with the portal triad relationship",
+    "closeup": "Duct confluence or portal triad cross-relationship"
+  },
+  "laterality": "Portal triad: portal vein posterior, proper hepatic artery medial/left, bile duct lateral/right",
+  "must_have": [
+    "Liver, gallbladder, and duodenum.",
+    "Right hepatic duct, left hepatic duct, common hepatic duct, cystic duct, and common bile duct.",
+    "Proper hepatic artery and portal vein."
+  ],
+  "spatial_rules": [
+    "Right and left hepatic ducts join to form the common hepatic duct.",
+    "Cystic duct joins the common hepatic duct to form the common bile duct.",
+    "Keep the portal vein posterior and the proper hepatic artery medial/left within the portal triad relationship."
+  ],
+  "forbidden_errors": [
+    {"error": "Invented accessory ducts added unless the user explicitly asks for variants.", "severity": "major"},
+    {"error": "Portal vein drawn anterior in the portal triad.", "severity": "major"},
+    {"error": "Cystic duct shown not joining the common hepatic duct.", "severity": "major"}
+  ],
+  "safety_concept": "Duct confluence: right + left hepatic ducts form the common hepatic duct; adding the cystic duct forms the common bile duct.",
+  "phases": [],
+  "verify": [
+    "Right and left hepatic ducts join to form the common hepatic duct.",
+    "Cystic duct joins the common hepatic duct to form the common bile duct.",
+    "Portal vein remains posterior in the portal triad relationship.",
+    "Non-gory and publication-appropriate."
+  ]
+}

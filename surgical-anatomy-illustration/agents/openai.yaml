@@ -1,0 +1,3 @@
+display_name: Surgical Anatomy Illustration
+short_description: Produce a surgical/anatomical illustration brief (overview + constrained prompt + bilingual QC review) and review any image for anatomical errors. Does not generate images.
+default_prompt: For the surgical or anatomy topic I provide, give me the three-part brief — a short overview, a copy-ready prompt, and a bilingual QC checklist. Do not generate the image; I will render the prompt myself and can bring it back for review.

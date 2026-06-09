@@ -1,0 +1,52 @@
+{
+  "schema_version": "0.1",
+  "id": "lap_appendectomy",
+  "name": "Laparoscopic appendectomy",
+  "aliases": ["appendectomy", "appendix", "appendicectomy", "阑尾切除", "腹腔镜阑尾切除", "阑尾炎", "阑尾"],
+  "region": "lower GI / right iliac fossa",
+  "kind": "surgical",
+  "tier": "model_generated",
+  "confidence": "high",
+  "sources": ["Model-generated (textbook-level); not yet citation-verified."],
+  "last_verified_by": "",
+  "review_note": "Standard anatomy; not yet clinician-verified.",
+  "labels": ["Cecum", "Terminal ileum", "Appendix", "Appendiceal base", "Mesoappendix", "Appendiceal artery", "Staple/ligation line"],
+  "intake": [
+    {"ask": "Figure type?", "why": "Determines composition", "options": ["anatomy overview", "step storyboard", "single key-step closeup"], "default": "step storyboard"},
+    {"ask": "Teaching focus?", "why": "One figure cannot show everything", "options": ["appendiceal base control", "mesoappendix / appendiceal artery", "orientation"], "default": "appendiceal base control"}
+  ],
+  "figure_scopes": {
+    "overview": "Cecum, terminal ileum, and appendix orientation in the right iliac fossa",
+    "storyboard": "Orientation -> mesoappendix/artery -> base control -> specimen removed",
+    "closeup": "Appendiceal base ligation/staple line at the cecum"
+  },
+  "laterality": "Right lower quadrant (right iliac fossa); appendiceal base at the cecum where the taeniae coli converge",
+  "must_have": [
+    "Cecum, terminal ileum, appendix, appendiceal base, mesoappendix, and appendiceal artery.",
+    "Appendiceal base connected to the cecum near the convergence of taeniae coli.",
+    "Mesoappendix attached to the appendix with vascular supply shown coherently."
+  ],
+  "spatial_rules": [
+    "The appendix may vary in direction, but its base must remain fixed at the cecum.",
+    "Terminal ileum should connect to the cecum and should not be mistaken for the appendix.",
+    "Appendiceal artery travels in the mesoappendix rather than directly from a large central trunk."
+  ],
+  "forbidden_errors": [
+    {"error": "A free-floating appendix detached from the cecum.", "severity": "major"},
+    {"error": "Terminal ileum confused with the appendix.", "severity": "major"},
+    {"error": "Appendiceal artery shown arising directly from the aorta.", "severity": "major"}
+  ],
+  "safety_concept": "Secure the appendiceal base at the cecum and identify the appendiceal artery in the mesoappendix before division.",
+  "phases": [
+    "Cecum, terminal ileum, and appendix orientation.",
+    "Mesoappendix and appendiceal artery identification.",
+    "Base control / ligation or staple line at the appendiceal base.",
+    "Removed appendix with cecum preserved, if a final panel is needed."
+  ],
+  "verify": [
+    "Appendiceal base remains attached to the cecum in orientation panels.",
+    "Terminal ileum and appendix are visually distinct.",
+    "Mesoappendix anatomy is present when vessels are shown.",
+    "Non-gory and publication-appropriate."
+  ]
+}

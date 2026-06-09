@@ -1,0 +1,52 @@
+{
+  "schema_version": "0.1",
+  "id": "inguinal_hernia",
+  "name": "Inguinal hernia anatomy and repair",
+  "aliases": ["inguinal hernia", "hesselbach", "groin hernia", "腹股沟疝", "海氏三角", "Hesselbach三角", "斜疝", "直疝"],
+  "region": "groin / inguinal region",
+  "kind": "surgical",
+  "tier": "model_generated",
+  "confidence": "high",
+  "sources": ["Model-generated (textbook-level); not yet citation-verified."],
+  "last_verified_by": "",
+  "review_note": "Standard anatomy; not yet clinician-verified.",
+  "labels": ["Inferior epigastric vessels", "Deep inguinal ring", "Spermatic cord", "Direct hernia space", "Indirect hernia sac", "Hesselbach triangle", "Mesh plane"],
+  "intake": [
+    {"ask": "Figure type?", "why": "Determines composition", "options": ["anatomy overview", "step storyboard", "single key-step closeup"], "default": "anatomy overview"},
+    {"ask": "Teaching focus?", "why": "One figure cannot show everything", "options": ["direct vs indirect", "repair / mesh plane", "inguinal canal anatomy"], "default": "direct vs indirect"}
+  ],
+  "figure_scopes": {
+    "overview": "Inguinal anatomy with inferior epigastric vessels as the orienting landmark",
+    "storyboard": "Overview -> direct vs indirect paths -> repair/mesh plane -> final covered anatomy",
+    "closeup": "Direct vs indirect relationship to the inferior epigastric vessels"
+  },
+  "laterality": "Inguinal region; deep ring lies lateral to the inferior epigastric vessels, Hesselbach triangle lies medial to them",
+  "must_have": [
+    "Inferior epigastric vessels, deep inguinal ring, spermatic cord or round ligament, direct space, and indirect hernia path.",
+    "Hesselbach triangle boundaries when direct hernia anatomy is shown.",
+    "Mesh plane or myopectineal orifice only if the request asks for repair anatomy."
+  ],
+  "spatial_rules": [
+    "Indirect hernia is lateral to the inferior epigastric vessels and follows the deep ring / inguinal canal path.",
+    "Direct hernia is medial to the inferior epigastric vessels within Hesselbach triangle.",
+    "Mesh coverage should span direct, indirect, and femoral potential spaces when repair anatomy is shown."
+  ],
+  "forbidden_errors": [
+    {"error": "Direct and indirect hernia positions swapped relative to the inferior epigastric vessels.", "severity": "critical"},
+    {"error": "Mesh run through cord structures, vessels, or nerves.", "severity": "major"},
+    {"error": "Inferior epigastric vessels omitted in a comparison figure.", "severity": "major"}
+  ],
+  "safety_concept": "Use the inferior epigastric vessels as the landmark separating direct (medial) from indirect (lateral) hernias.",
+  "phases": [
+    "Inguinal anatomy overview with inferior epigastric vessels.",
+    "Direct versus indirect hernia paths.",
+    "Repair plane or mesh coverage concept, if requested.",
+    "Final reduced/covered anatomy, if useful."
+  ],
+  "verify": [
+    "Direct/indirect relationship to the inferior epigastric vessels is correct.",
+    "Deep ring and cord/round ligament relationship is coherent.",
+    "Mesh, if present, covers spaces without crossing through vital structures.",
+    "Non-gory and publication-appropriate."
+  ]
+}
