@@ -1,0 +1,30 @@
+﻿__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+.env
+.env.*
+*.log
+*.tmp
+Thumbs.db
+.DS_Store
+
+venv/
+.venv/
+env/
+
+build/
+dist/
+
+# Generated run artifacts (jobs/prompts/reviews/images), not curated examples
+outputs/
+
+# Python cache in nested folders
+surgical-anatomy-illustration/**/__pycache__/
+
+# Local legacy archive kept outside the public skill package
+archive/
+
+# Local Chrome profile used only for one-off SVG preview attempts
+.tmp_chrome_profile/
