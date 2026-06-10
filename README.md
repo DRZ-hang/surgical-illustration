@@ -6,7 +6,7 @@
 
 **English** · [简体中文](README.zh-CN.md)
 
-<!-- Add a hero figure, then uncomment:  ![hero](docs/images/hero.png)  -->
+![English brief example](docs/images/brief-en.png)
 
 </div>
 
@@ -20,6 +20,13 @@
 procedure's non-negotiable anatomy rules and safety landmarks into the prompt; after you
 draw, it reviews the figure for anatomical errors. Its priority is not looking right — it
 is *being* right. What it is sure of, it judges; what is case-dependent, it flags for you.
+
+## What it produces
+
+| Brief to constrained prompt | Scientific review |
+| --- | --- |
+| ![Chinese brief example](docs/images/brief-zh.png) | ![Chinese scientific review example](docs/images/review-zh.png) |
+| ![English brief example](docs/images/brief-en.png) | ![English scientific review example](docs/images/review-en.png) |
 
 ## Repository structure
 
